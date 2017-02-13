@@ -1,0 +1,2 @@
+binddn = cn=monitor,ou=Auth,dc=example,dc=com
+bindpw = xxxxxxxxxx
