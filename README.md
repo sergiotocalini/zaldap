@@ -1,7 +1,8 @@
 # zaldap
 
+# 20. Monitor
 
-# Monitor configuration via cn=config(5)
+## 20.1. Monitor configuration via cn=config
 
     #~ vi monitor_enable.ldif
     dn: cn=module,cn=config
@@ -16,11 +17,24 @@
     olcAccess: {0}to * by dn.exact=cn=monitor,ou=auth,dc=example,dc=com manage by * none
 
     #~ ldapadd -Q -Y EXTERNAL -H ldapi:/// -f monitor_enable.ldif
+    #~
+
+## 20.2. Monitor configuration via slapd.conf
+
+    #~ vi /etc/ldap/slapd.conf
+    ...
+    database monitor
     
+    access to *
+           by dn.exact=cn=monitor,ou=auth,dc=example,dc=com manage
+           by * none
+    #~
+
 # Zabbix deploy
 
     #~ git clone https://github.com/sergiotocalini/zaldap.git
     #~ cd zaldap
     #~ ./deploy_zabbix.sh
+    #~
     
     
