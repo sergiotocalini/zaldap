@@ -33,8 +33,7 @@
 # Zabbix deploy
 
     #~ git clone https://github.com/sergiotocalini/zaldap.git
-    #~ cd zaldap
-    #~ ./deploy_zabbix.sh
+    #~ ./zaldap/deploy_zabbix.sh
     #~
     
     
