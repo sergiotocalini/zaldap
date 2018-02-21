@@ -33,7 +33,7 @@
 # Zabbix deploy
 
     #~ git clone https://github.com/sergiotocalini/zaldap.git
-    #~ ./zaldap/deploy_zabbix.sh
+    #~ ./zaldap/deploy_zabbix.sh 'localhost' 'cn=monitor,ou=auth,dc=example,dc=com' 'xxxxxxxx'
     #~
     
     
