@@ -11,6 +11,6 @@ cp -r ${SOURCE_DIR}/zaldap/queries ${ZABBIX_DIR}/scripts/agentd/zaldap/
 cp ${SOURCE_DIR}/zaldap/zaldap.conf.example ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
 cp ${SOURCE_DIR}/zaldap/zaldap.sh ${ZABBIX_DIR}/scripts/agentd/zaldap/
 cp ${SOURCE_DIR}/zaldap/zabbix_agentd.conf ${ZABBIX_DIR}/zabbix_agentd.d/zaldap.conf
-sed -i "s/host=.*/host=${host}/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
-sed -i "s/binddn=.*/binddn=${binddn}/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
-sed -i "s/bindpw=.*/bindpw=${bindpw}/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
+sed -i "s/host=.*/host=\"${host}\"/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
+sed -i "s/binddn=.*/binddn=\"${binddn}\"/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
+sed -i "s/bindpw=.*/bindpw=\"${bindpw}\"/g" ${ZABBIX_DIR}/scripts/agentd/zaldap/zaldap.conf
