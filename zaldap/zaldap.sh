@@ -121,7 +121,7 @@ if [[ "${?}" == 0 ]]; then
 	usage 0
     fi
     rval=`ldapsearch -x -h "${host}" -D ${binddn} -w ${bindpw} -b "${basedn}" \
-    	   	     -s base "(objectclass=*)" "${attrs}"|grep "^${attrs}"|${GAWK} \
+    	   	     -s base "(objectclass=*)" "${attrs}" 2>/dev/null|grep "^${attrs}"|${GAWK} \
 		     '{sub(/'${attrs}': /,""); print}'`
     rcode="${?}"
     echo ${rval:-0}
