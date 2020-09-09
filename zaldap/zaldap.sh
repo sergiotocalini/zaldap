@@ -12,7 +12,8 @@ rval=0
 APP_NAME=`basename ${0}`
 APP_DIR=`dirname ${0}`
 APP_VER="0.0.1"
-APP_WEB="http://www.sergiotocalini.com.ar/"
+APP_WEB="https://sergiotocalini.github.io/"
+APP_FIX="https://github.com/sergiotocalini/zaldap/issues"
 PATH="${PATH}:/usr/local/bin:/opt/csw/bin:/opt/csw/sbin"
 GAWK=`which awk`
 #
@@ -51,7 +52,7 @@ usage() {
 	echo "For a full list of supported queries run: ${APP_NAME%.*} -h query"
 	echo ""
     fi
-    echo "Please send any bug reports to sergiotocalini@gmail.com"
+    echo "Please send any bug reports to ${APP_FIX}"
     exit 1
 }
 
